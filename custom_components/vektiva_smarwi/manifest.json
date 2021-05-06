@@ -12,7 +12,7 @@
   "codeowners": [
     "@cvrky",
     "@wongcz"
-  ]
+  ],
   "iot_class": "calculated",
   "version": "1.0.0"  
 }
