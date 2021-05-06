@@ -3,12 +3,16 @@
   "name": "Vektiva Smarwi",
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/vektiva_smarwi",
+  "issue_tracker": "https://github.com/cvrky/vektiva_smarwi_ha/issues",
   "requirements": ["aiohttp"],
   "ssdp": [],
   "zeroconf": [],
   "homekit": {},
   "dependencies": [],
   "codeowners": [
-    "@cvrky"
+    "@cvrky",
+    "@wongcz"
   ]
+  "iot_class": "calculated",
+  "version": "1.0.0"  
 }
