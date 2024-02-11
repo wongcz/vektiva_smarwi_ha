@@ -6,8 +6,8 @@ import voluptuous
 
 import homeassistant.helpers.config_validation
 # Import the device class from the component that you want to support
-from homeassistant.components.cover import PLATFORM_SCHEMA, CoverEntity, DEVICE_CLASS_WINDOW, ATTR_POSITION
-from homeassistant.components.cover import SUPPORT_OPEN, SUPPORT_CLOSE, SUPPORT_SET_POSITION
+from homeassistant.components.cover import PLATFORM_SCHEMA, CoverEntity, CoverDeviceClass.WINDOW, ATTR_POSITION
+from homeassistant.components.cover import CoverEntityFeature.OPEN, CoverEntityFeature.CLOSE, CoverEntityFeature.SET_POSITION
 from homeassistant.const import CONF_HOSTS
 from homeassistant.core import HomeAssistant
 from homeassistant.config_entries import ConfigEntry
@@ -69,11 +69,11 @@ class VektivaSmarwi(CoverEntity):
 
     @property
     def device_class(self):
-        return DEVICE_CLASS_WINDOW
+        return CoverDeviceClass.WINDOW
 
     @property
     def supported_features(self):
-        return SUPPORT_OPEN | SUPPORT_CLOSE | SUPPORT_SET_POSITION
+        return CoverEntityFeature.OPEN | CoverEntityFeature.CLOSE | CoverEntityFeature.SET_POSITION
 
     @property
     def current_cover_position(self):
